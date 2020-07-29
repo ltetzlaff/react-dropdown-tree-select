@@ -29,7 +29,7 @@
     "commit": "git-cz",
     "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls",
     "demo": "rimraf ./docs/bundle.js && webpack-serve --content ./docs --port 3000 --open --config docs/webpack.config.js",
-    "prepublishOnly": "npm run build",
+    "prepare": "npm run build",
     "lint": "eslint --fix src docs webpack.config.js && stylelint --fix \"src/**/*.css\"",
     "lint:nofix": "eslint src webpack.config.js && stylelint \"src/**/*.css\"",
     "format": "prettier-eslint --write \"src/**/*.js\" \"docs/**/*.js\" webpack.config.js",
